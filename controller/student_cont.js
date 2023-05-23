@@ -23,7 +23,7 @@ export const show=async(req,res)=>{
     // const _id=req.params._id
     const {_id}=req.params
     // console.log(_id)
-    const singlestudent= await student.findById(_id).lean()
+    const singlestudent= await student.findById(_id).populate("department").lean()
     // console.log(singlesubject)
     res.render('student/show',{student:singlestudent})
 

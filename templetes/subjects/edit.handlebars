@@ -23,6 +23,19 @@
         </select>
     </div>
     <div>
+        <label for="">doctor</label>
+
+        <select name="doctor" id="" class="form-select">
+
+            {{#each doctors}}
+
+            <option value="{{_id}}">{{username}}</option>
+
+
+            {{/each}}
+        </select>
+    </div>
+    <div>
         <button class="btn btn-success" type="submit">Edit subject</button>
     </div>
 </form>

@@ -22,7 +22,7 @@ export const show=async(req,res)=>{
     // const _id=req.params._id
     const {_id}=req.params
     // console.log(_id)
-    const singledoctor= await doctor.findById(_id).lean()
+    const singledoctor= await doctor.findById(_id).populate("department").lean()
     // console.log(singlesubject)
     res.render('doctor/show',{doctor:singledoctor})
 

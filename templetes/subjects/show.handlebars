@@ -1,7 +1,34 @@
 <h1>{{subject.name}}</h1>
-<div>
+{{!-- <div>
     code:{{subject.code}}
 </div>
 <div>
     department:{{subject.department}}
 </div>
+<div>
+    doctor:{{subject.doctor}}
+</div>
+<h1>Update department</h1> --}}
+
+<form action="" method="" >
+<div>
+    <label>subject</label>
+    <input type="text" class="form-control" name="subject" value="{{subject.name}}">
+</div>
+
+<div>
+    <label>code</label>
+    <input type="text" class="form-control" name="code" value="{{subject.code}}">
+</div>
+<div>
+    <label>department</label>
+    <input type="text" class="form-control" name="department" value="{{subject.department.name}}">
+</div>
+<div>
+    <label>doctor</label>
+    <input type="text" class="form-control" name="doctor" value="{{subject.doctor.username}}">
+</div>
+
+
+
+</form>

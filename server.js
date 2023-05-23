@@ -8,7 +8,9 @@ import doctorrouter from "./routes/doctor.js";
 import studentrouter from "./routes/student.js"
 import adminrouter from "./routes/admin.js"
 import secodpage from "./routes/second.js"
+import doctorLogrouter from "./routes/doctorLog.js";
 import methodOverride from "method-override"
+
 dotenv.config();
 mongoose.connect(process.env.mongooconnect)
 
@@ -28,9 +30,10 @@ app.use("/student",studentrouter)
 app.get('/',(req,res)=>{
   res.render('first_page/first')
 })
-app.use('/second',secodpage)
+app.use('/second',secodpage)  
+app.use('/doctorLog',doctorLogrouter)
 app.use(methodOverride('_method'))
-
+ 
 
  
  
